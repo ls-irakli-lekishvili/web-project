@@ -1,14 +1,15 @@
-export default class PreloadScene extends Phaser.Scene {
+class PreloadScene extends Phaser.Scene {
   constructor() {
     super({ key: 'PreloadScene' })
   }
 
   preload() {
-    this.load.image('phaser-logo', 'assets/img/phaser-logo.png')
+    this.load.tilemapTiledJSON('map', 'assets/maps/world_map_1.json');
+    this.load.image('tiles_1', 'assets/tiles/main_lev_build_1.png');
   }
 
   create() {
-    this.scene.start('MainScene')
+    this.scene.start('MainScene');
 
     /**
      * This is how you would dynamically import the mainScene class (with code splitting),
@@ -25,3 +26,5 @@ export default class PreloadScene extends Phaser.Scene {
     // else console.log('The mainScene class will not even be loaded by the browser')
   }
 }
+
+export default PreloadScene;

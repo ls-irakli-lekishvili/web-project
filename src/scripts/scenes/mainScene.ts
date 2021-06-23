@@ -1,27 +1,36 @@
 import PhaserLogo from '../objects/phaserLogo'
 import FpsText from '../objects/fpsText'
 
-export default class MainScene extends Phaser.Scene {
-  fpsText
+class MainScene extends Phaser.Scene {
 
   constructor() {
     super({ key: 'MainScene' })
   }
 
   create() {
-    new PhaserLogo(this, this.cameras.main.width / 2, 0)
-    this.fpsText = new FpsText(this)
+    this.cameras.main.setBackgroundColor('#000000');
 
-    // display the Phaser.VERSION
-    this.add
-      .text(this.cameras.main.width - 15, 15, `Phaser v${Phaser.VERSION}`, {
-        color: '#000000',
-        fontSize: '24px'
-      })
-      .setOrigin(1, 0)
+    const map = this.createMap();
+    this.createLayer(map);
+
+    // (map as any).createStaticLayer('environment', tileSet);
+    // (map as any).createStaticLayer('platforms', tileSet);
+  }
+
+  createMap(): Phaser.Tilemaps.Tilemap {
+    const map: Phaser.Tilemaps.Tilemap = this.make.tilemap({key: 'map'});
+    map.addTilesetImage('main_lev_build_1', 'tiles_1');
+    return map;
+  }
+
+  createLayer(map: Phaser.Tilemaps.Tilemap) {
+    const tileSet = map.getTileset('main_lev_build_1');
+    map.createLayer('environment', tileSet);
+    map.createLayer('platforms', tileSet);
   }
 
   update() {
-    this.fpsText.update()
   }
 }
+
+export default MainScene
