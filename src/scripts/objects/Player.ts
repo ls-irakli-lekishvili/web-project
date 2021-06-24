@@ -8,7 +8,7 @@ import collidable from '../mixins/collidable';
 class Player extends Phaser.Physics.Arcade.Sprite {
   gravity: number = 500;
   speed: number = 200;
-  jumpSpeed: number = 500;
+  jumpSpeed: number = 350;
   cursor: Phaser.Types.Input.Keyboard.CursorKeys;
   body: Phaser.Physics.Arcade.Body;
 

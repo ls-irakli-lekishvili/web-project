@@ -2,20 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1c41ad0d-4216-48bc-ba34-70f6a1319240" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/assets/player/move_sprite.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/scripts/mixins/collidable.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/scripts/objects/Player.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/scripts/objects/playerAnimations.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.prettierrc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/assets/maps/world_map_1.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/maps/world_map_1.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/scripts/game.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/scripts/game.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/scripts/objects/fpsText.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/scripts/objects/phaserLogo.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scripts/objects/Player.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/scripts/objects/Player.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/scripts/scenes/mainScene.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/scripts/scenes/mainScene.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/scripts/scenes/preloadScene.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/scripts/scenes/preloadScene.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -45,11 +36,11 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/assets/player" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="prettierjs.PrettierConfiguration.Package" value="C:\Users\noface\Desktop\web-project\node_modules\prettier" />
     <property name="settings.editor.selected.configurable" value="preferences.sourceCode.TypeScript" />
-    <property name="ts.external.directory.path" value="C:\Program Files\JetBrains\WebStorm 2020.3\plugins\JavaScriptLanguage\jsLanguageServicesImpl\external" />
+    <property name="ts.external.directory.path" value="C:\Users\Irakli\Desktop\web-project\node_modules\typescript\lib" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
@@ -70,6 +61,7 @@
       <option name="presentableId" value="Default" />
       <updated>1624477079139</updated>
       <workItem from="1624477080473" duration="19331000" />
+      <workItem from="1624521257023" duration="8326000" />
     </task>
     <servers />
   </component>
@@ -86,6 +78,7 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
