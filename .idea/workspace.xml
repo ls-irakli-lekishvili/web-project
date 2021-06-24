@@ -2,10 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1c41ad0d-4216-48bc-ba34-70f6a1319240" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/assets/img/sky.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/maps/world_map_1.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/tiles/main_lev_build_1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/player/move_sprite.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/scripts/mixins/collidable.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/scripts/objects/Player.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/scripts/objects/playerAnimations.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.prettierrc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/maps/world_map_1.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/maps/world_map_1.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scripts/game.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/scripts/game.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scripts/objects/fpsText.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scripts/objects/phaserLogo.ts" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/scripts/scenes/mainScene.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/scripts/scenes/mainScene.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/scripts/scenes/preloadScene.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/scripts/scenes/preloadScene.ts" afterDir="false" />
     </list>
@@ -13,6 +21,13 @@
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="TypeScript File" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -30,14 +45,16 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/assets/tiles" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/assets/player" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="prettierjs.PrettierConfiguration.Package" value="C:\Users\noface\Desktop\web-project\node_modules\prettier" />
+    <property name="settings.editor.selected.configurable" value="preferences.sourceCode.TypeScript" />
     <property name="ts.external.directory.path" value="C:\Program Files\JetBrains\WebStorm 2020.3\plugins\JavaScriptLanguage\jsLanguageServicesImpl\external" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\noface\Desktop\web-project\src\assets\player" />
       <recent name="C:\Users\noface\Desktop\web-project\src\assets\tiles" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
@@ -52,7 +69,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1624477079139</updated>
-      <workItem from="1624477080473" duration="5683000" />
+      <workItem from="1624477080473" duration="19331000" />
     </task>
     <servers />
   </component>
@@ -72,5 +89,9 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
 </project>
