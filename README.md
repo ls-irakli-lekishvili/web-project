@@ -1,3 +1,4 @@
 ## Phaser 3 Game with typescript
 
-[play game]:https://yesntface.github.io/web-project/
+
+[play game](https://yesntface.github.io/web-project/)
