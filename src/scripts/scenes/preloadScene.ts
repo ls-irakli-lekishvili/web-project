@@ -7,11 +7,24 @@ class PreloadScene extends Phaser.Scene {
     this.load.tilemapTiledJSON('map', 'assets/maps/world_map_1.json');
     this.load.image('tiles_1', 'assets/tiles/main_lev_build_1.png');
     this.load.image('move', 'assets/tiles/main_lev_build_1.png');
+    this.load.image('fireball', 'assets/weapons/fireball.png');
     this.load.spritesheet('player', 'assets/player/move_sprite.png', {
       frameWidth: 32,
       frameHeight: 38,
       spacing: 32
     });
+    this.load.spritesheet('enemy_bird', 'assets/enemy/enemy_sheet.png', {
+      frameWidth: 32,
+      frameHeight: 64,
+      spacing: 32
+    });
+
+    this.load.spritesheet('player_attack', 'assets/player/throw_attack_sheet.png', {
+      frameWidth: 32,
+      frameHeight: 38,
+      spacing: 32
+    });
+
   }
 
   create() {
