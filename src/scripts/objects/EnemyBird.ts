@@ -1,6 +1,7 @@
 import MainScene from '../scenes/mainScene';
 import Enemy from './Enemy';
 import createAnimations from '../animations/birdEnemyAnimations';
+import Projectile from '../attacks/Projectile';
 
 
 class EnemyBird extends Enemy {
@@ -11,17 +12,21 @@ class EnemyBird extends Enemy {
 
   update(time: number, delta: number) {
     super.update(time, delta);
+    if(!this.active) { return; }
+
+    if (this.anims.isPlaying && this.anims.getName() === 'bird-enemy-hurt') {
+      return;
+    }
+
     this.play('bird-enemy-idle', true);
   }
 
-
-  deleteEnemy() {
-    this.scene.events.off(Phaser.Scenes.Events.UPDATE, this.update, this);
-    this.setActive(false);
-    this.setVisible(false);
-    this.body.reset(-100, -100);
-
+  takesHit(source: Projectile) {
+    super.takesHit(source);
+    this.play('bird-enemy-hurt', true);
   }
+
+
 }
 
 export default EnemyBird;

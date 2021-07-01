@@ -2,6 +2,7 @@ import Phaser from 'phaser';
 import MainScene from '../scenes/mainScene';
 
 import collidable from '../mixins/collidable';
+import Projectile from '../attacks/Projectile';
 
 
 class Enemy extends Phaser.Physics.Arcade.Sprite {
@@ -13,6 +14,7 @@ class Enemy extends Phaser.Physics.Arcade.Sprite {
   facingRight: boolean = true;
   timeFromLastTurn = 0;
   damage: number = 20;
+  health: number = 50;
 
   constructor(scene: MainScene, x: number, y: number, key: string) {
     super(scene, x, y, key);
@@ -45,8 +47,13 @@ class Enemy extends Phaser.Physics.Arcade.Sprite {
   }
 
   update(time: number, delta: number) {
-    this.patrol(time);
+    if (this.getBounds().bottom > 600) {
+      this.destroy();
+      return;
+    }
 
+
+    this.patrol(time);
   }
 
   patrol(time: number) {
@@ -65,11 +72,29 @@ class Enemy extends Phaser.Physics.Arcade.Sprite {
     }
   }
 
-
   setColliderLayer(collider: Phaser.Tilemaps.TilemapLayer) {
     this.platformColliderLayer = collider;
   }
 
+  takesHit(source: Projectile) {
+    source.collidesWithTarget(this);
+    if (this.health <= 0) {
+      this.scene.events.off(Phaser.Scenes.Events.UPDATE, this.update, this);
+      this.setActive(false);
+      this.rayGraphics.clear();
+      this.deleteEnemy();
+    }
+    this.health -= source.damage;
+  }
+
+
+  deleteEnemy() {
+
+    this.setTint(0xFF0000);
+    this.setVelocity(0, -300);
+    this.body.checkCollision.none = true;
+    this.setCollideWorldBounds(false);
+  }
 
 }
 

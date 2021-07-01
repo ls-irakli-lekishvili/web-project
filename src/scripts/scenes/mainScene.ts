@@ -4,6 +4,8 @@ import Enemies from '../groups/Enemies';
 import Enemy from '../objects/Enemy';
 import Projectile from '../attacks/Projectile';
 import EnemyBird from '../objects/EnemyBird';
+import initAnims from '../animations/hittingAnimations';
+import Timer from '../hud/Timer';
 
 interface Props {
   offset: number;
@@ -23,6 +25,11 @@ class MainScene extends Phaser.Scene {
 
   create() {
     this.cameras.main.setBackgroundColor('#000000');
+
+    new Timer(this, 100, 100, 20)
+      .updateTimer();
+
+    initAnims(this.anims);
 
     const map = this.createMap();
     const layers = this.createLayers(map);
@@ -79,9 +86,7 @@ class MainScene extends Phaser.Scene {
   }
 
   onWeaponHit(enemy: EnemyBird, source: Projectile) {
-    source.setActive(false);
-    source.setVisible(false);
-    enemy.deleteEnemy();
+    enemy.takesHit(source);
   }
 
   addEnemiesCollider(enemies: any, { platform, player }: { platform: Phaser.Tilemaps.TilemapLayer, player: Player }) {
@@ -112,12 +117,12 @@ class MainScene extends Phaser.Scene {
   createLevelFinish(end: Phaser.Types.Tilemaps.TiledObject, player: Player) {
     const finishLine = this.physics.add.sprite(end.x!, end.y!, 'end')
       .setAlpha(0)
-      .setSize(5, 200)
-      .setOrigin(.5, 1);
+      .setSize(5, 400)
+      .setOrigin(0, 1);
 
     const finishGameOverlap = this.physics.add.overlap(player, finishLine, () => {
       finishGameOverlap.active = false;
-      this.scene.start('GameOverScene');
+      this.scene.start('WinningScene');
     });
   }
 

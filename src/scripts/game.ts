@@ -2,6 +2,7 @@ import Phaser from 'phaser';
 import MainScene from './scenes/mainScene';
 import PreloadScene from './scenes/preloadScene';
 import GameOverScene from './scenes/gameOverScene';
+import WinningScene from './scenes/winningScene';
 
 const MAP_WIDTH = 1600;
 
@@ -30,7 +31,7 @@ const config = {
     width: DEFAULT_WIDTH,
     height: DEFAULT_HEIGHT
   },
-  scene: [new PreloadScene(), new MainScene(SHARED_CONFIG), new GameOverScene(SHARED_CONFIG)],
+  scene: [new PreloadScene(), new MainScene(SHARED_CONFIG), new GameOverScene(SHARED_CONFIG), new WinningScene(SHARED_CONFIG)],
   physics: {
     default: 'arcade',
     arcade: {

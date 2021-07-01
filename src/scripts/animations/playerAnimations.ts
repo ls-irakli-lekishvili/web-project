@@ -25,7 +25,7 @@ export default (anims: Phaser.Animations.AnimationState) => {
   anims.create({
     key: 'attack_fireball',
     frames: anims.generateFrameNumbers('player_attack',
-      { start: 0, end: 7 }),
+      { start: 0, end: 6 }),
     frameRate: 14
   });
 }
